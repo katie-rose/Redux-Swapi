@@ -13,10 +13,8 @@ import rootReducer from "./reducers";
 // logger from redux-logger
 // rootReducer from ./reducers
 
-applyMiddleware(thunk, logger);
-
 const store = createStore(
-  rootReducer, applyMiddleware(thunk));
+  rootReducer, applyMiddleware(thunk, logger));
   /* applyMiddleware goes here ^ */
 
 
